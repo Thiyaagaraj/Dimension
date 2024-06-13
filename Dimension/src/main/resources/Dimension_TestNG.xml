@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Dimension Test Automation">
+	<test name="Login to Dimension">
+		<classes>
+			<class name="testCases.LoginToDimension"></class>
+			<class name="testCases.WorkcenterOrder"></class>
+			 <class name="testCases.OrderDetails"></class>
+			<class name="testCases.SubConBooking"></class>
+		</classes>
+	</test>
+</suite>

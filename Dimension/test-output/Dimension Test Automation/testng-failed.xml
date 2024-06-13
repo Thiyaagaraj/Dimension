@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Dimension Test Automation]">
+  <test thread-count="5" name="Login to Dimension(failed)">
+    <classes>
+      <class name="testCases.SubConBooking">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="newSubConBooking"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.SubConBooking -->
+    </classes>
+  </test> <!-- Login to Dimension(failed) -->
+</suite> <!-- Failed suite [Dimension Test Automation] -->
