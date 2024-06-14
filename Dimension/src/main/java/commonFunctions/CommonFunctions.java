@@ -54,21 +54,21 @@ public class CommonFunctions {
 	@DataProvider(name="loginData")
 	public String[][] loginDataProvider() throws IOException{
 		
-		String[][] data=getExcelData("C:\\Users\\lt\\eclipse-workspace\\Dimension\\TestData\\TestData.xlsx","Login");
+		String[][] data=getExcelData(".\\TestData\\TestData.xlsx","Login");
 		return data;
 	}
 	
 	@DataProvider(name="OrderData")
 	public String[][] orderDataProvider() throws IOException{
 		
-		String[][] data=getExcelData("C:\\Users\\lt\\eclipse-workspace\\Dimension\\TestData\\TestData.xlsx","WorkCenter_Order");
+		String[][] data=getExcelData(".\\TestData\\TestData.xlsx","WorkCenter_Order");
 		return data;
 	}
 	
 	@DataProvider(name="SubConData")
 	public String[][] subConDataProvider() throws IOException{
 		
-		String[][] data=getExcelData("C:\\Users\\lt\\eclipse-workspace\\Dimension\\TestData\\TestData.xlsx","SubContractor");
+		String[][] data=getExcelData(".\\TestData\\TestData.xlsx","SubContractor");
 		return data;
 	}
 	
@@ -94,8 +94,10 @@ public class CommonFunctions {
 	}
 
 	public Properties loadPropertyFile() throws IOException {
-
-		FileInputStream fileInputStream = new FileInputStream("src/main/resources/config.properties");
+		logger.info("Into the Load Property File functions");
+		logger.info("Reading Load Property File ");
+		FileInputStream fileInputStream = new FileInputStream("./config.properties");
+		logger.info("Read Load Property File");
 		properties = new Properties();
 		properties.load(fileInputStream);
 		return properties;
@@ -154,7 +156,7 @@ public class CommonFunctions {
         sparkReporter = new ExtentSparkReporter("./ExtentReport.html");
         extentReport.attachReporter(sparkReporter);
 		logger.info("Application Test Execution Begins");
-		PropertyConfigurator.configure("src/main/resources/log4j.properties");
+		PropertyConfigurator.configure("./log4j.properties");
 		logger.info("Loading the Property File");
 		loadPropertyFile();
 		logger.info("Property File loaded successfully");
