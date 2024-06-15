@@ -118,9 +118,10 @@ public class CommonFunctions {
         Login_PageObjects.passWord.sendKeys(passWord);
         Login_PageObjects.signIn.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        if(Login_PageObjects.alreadyLoggedInYes.isDisplayed()) {
-        	Login_PageObjects.alreadyLoggedInYes.click();
-        }
+		/*
+		 * if(Login_PageObjects.alreadyLoggedInYes.isDisplayed()) {
+		 * Login_PageObjects.alreadyLoggedInYes.click(); }
+		 */
     }
 	
 	public void logOut() {
