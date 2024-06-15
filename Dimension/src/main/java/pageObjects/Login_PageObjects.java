@@ -22,4 +22,7 @@ public class Login_PageObjects {
 	
 	@FindBy(xpath = "//a[@id='button-1005']")
 	public static WebElement inValidOkBtn;
+	
+	@FindBy(id = "button-1006")
+	public static WebElement alreadyLoggedInYes;
 }

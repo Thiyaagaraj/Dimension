@@ -64,5 +64,4 @@ public class LoginToDimension extends CommonFunctions {
 			testCase.log(Status.PASS, "Invalid Credentials is Passed");
 		}
 	}
-
 }

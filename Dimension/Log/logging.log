@@ -120,3 +120,94 @@
 2024=06=14 17:24:21 INFO  CommonFunctions:127 - Navigated to Setting Link
 2024=06=14 17:24:21 INFO  CommonFunctions:129 - Logout button clicked
 2024=06=14 17:24:21 INFO  CommonFunctions:189 - Execution done and closing the browser
+2024=06=15 09:31:14 INFO  CommonFunctions:160 - Loading the Property File
+2024=06=15 09:31:14 INFO  CommonFunctions:97 - Into the Load Property File functions
+2024=06=15 09:31:14 INFO  CommonFunctions:98 - Reading Load Property File 
+2024=06=15 09:31:14 INFO  CommonFunctions:100 - Read Load Property File
+2024=06=15 09:31:14 INFO  CommonFunctions:162 - Property File loaded successfully
+2024=06=15 09:31:14 INFO  CommonFunctions:166 - Browser is :chrome
+2024=06=15 09:31:14 INFO  CommonFunctions:167 - URL is :http://192.168.2.165/dimensiontest/frm_login.aspx
+2024=06=15 09:31:14 INFO  CommonFunctions:170 - Launching chrome
+2024=06=15 09:31:17 INFO  CommonFunctions:179 - Navigating to Dimension
+2024=06=15 09:31:19 INFO  LoginToDimension:26 - Login Function With Valid Credentials
+2024=06=15 09:31:19 INFO  CommonFunctions:114 - Logging to the Dimension Application
+2024=06=15 09:31:19 INFO  WorkcenterOrder:22 - Navigated to Workcenter Order
+2024=06=15 09:31:30 INFO  WorkcenterOrder:30 - Workcenter objects initialized
+2024=06=15 09:31:30 INFO  WorkcenterOrder:35 - Order number entered and order details are loaded
+2024=06=15 09:31:30 INFO  OrderDetails:23 - Navigated to Order Details Screen
+2024=06=15 09:31:41 INFO  OrderDetails:33 - Moved to Process Actions
+2024=06=15 09:31:41 INFO  SubConBooking:89 - Navigated to SubContractor Booking Screen
+2024=06=15 09:31:44 INFO  SubConBooking:35 - Entering Remarks
+2024=06=15 09:31:45 INFO  CommonFunctions:187 - Logging out from the Dimension
+2024=06=15 09:32:22 INFO  CommonFunctions:160 - Loading the Property File
+2024=06=15 09:32:22 INFO  CommonFunctions:97 - Into the Load Property File functions
+2024=06=15 09:32:22 INFO  CommonFunctions:98 - Reading Load Property File 
+2024=06=15 09:32:22 INFO  CommonFunctions:100 - Read Load Property File
+2024=06=15 09:32:22 INFO  CommonFunctions:162 - Property File loaded successfully
+2024=06=15 09:32:22 INFO  CommonFunctions:166 - Browser is :chrome
+2024=06=15 09:32:22 INFO  CommonFunctions:167 - URL is :http://192.168.2.165/dimensiontest/frm_login.aspx
+2024=06=15 09:32:22 INFO  CommonFunctions:170 - Launching chrome
+2024=06=15 09:32:24 INFO  CommonFunctions:179 - Navigating to Dimension
+2024=06=15 09:32:25 INFO  LoginToDimension:26 - Login Function With Valid Credentials
+2024=06=15 09:32:25 INFO  CommonFunctions:114 - Logging to the Dimension Application
+2024=06=15 09:32:25 INFO  WorkcenterOrder:22 - Navigated to Workcenter Order
+2024=06=15 09:32:56 INFO  OrderDetails:23 - Navigated to Order Details Screen
+2024=06=15 09:33:56 INFO  SubConBooking:89 - Navigated to SubContractor Booking Screen
+2024=06=15 09:34:56 INFO  CommonFunctions:187 - Logging out from the Dimension
+2024=06=15 09:51:50 INFO  CommonFunctions:163 - Loading the Property File
+2024=06=15 09:51:50 INFO  CommonFunctions:97 - Into the Load Property File functions
+2024=06=15 09:51:50 INFO  CommonFunctions:98 - Reading Load Property File 
+2024=06=15 09:51:50 INFO  CommonFunctions:100 - Read Load Property File
+2024=06=15 09:51:50 INFO  CommonFunctions:165 - Property File loaded successfully
+2024=06=15 09:51:50 INFO  CommonFunctions:169 - Browser is :chrome
+2024=06=15 09:51:50 INFO  CommonFunctions:170 - URL is :http://192.168.2.165/dimensiontest/frm_login.aspx
+2024=06=15 09:51:50 INFO  CommonFunctions:173 - Launching chrome
+2024=06=15 09:51:51 INFO  CommonFunctions:182 - Navigating to Dimension
+2024=06=15 09:51:53 INFO  LoginToDimension:25 - Login Function With Valid Credentials
+2024=06=15 09:51:53 INFO  CommonFunctions:114 - Logging to the Dimension Application
+2024=06=15 09:51:53 INFO  WorkcenterOrder:22 - Navigated to Workcenter Order
+2024=06=15 09:52:02 INFO  WorkcenterOrder:30 - Workcenter objects initialized
+2024=06=15 09:52:02 INFO  WorkcenterOrder:35 - Order number entered and order details are loaded
+2024=06=15 09:52:02 INFO  OrderDetails:23 - Navigated to Order Details Screen
+2024=06=15 09:52:06 INFO  OrderDetails:33 - Moved to Process Actions
+2024=06=15 09:52:06 INFO  SubConBooking:89 - Navigated to SubContractor Booking Screen
+2024=06=15 09:52:07 INFO  SubConBooking:35 - Entering Remarks
+2024=06=15 09:52:07 INFO  CommonFunctions:190 - Logging out from the Dimension
+2024=06=15 09:53:35 INFO  CommonFunctions:163 - Loading the Property File
+2024=06=15 09:53:35 INFO  CommonFunctions:97 - Into the Load Property File functions
+2024=06=15 09:53:35 INFO  CommonFunctions:98 - Reading Load Property File 
+2024=06=15 09:53:35 INFO  CommonFunctions:100 - Read Load Property File
+2024=06=15 09:53:35 INFO  CommonFunctions:165 - Property File loaded successfully
+2024=06=15 09:53:35 INFO  CommonFunctions:169 - Browser is :chrome
+2024=06=15 09:53:35 INFO  CommonFunctions:170 - URL is :http://192.168.2.165/dimensiontest/frm_login.aspx
+2024=06=15 09:53:35 INFO  CommonFunctions:173 - Launching chrome
+2024=06=15 09:53:36 INFO  CommonFunctions:182 - Navigating to Dimension
+2024=06=15 09:53:38 INFO  LoginToDimension:25 - Login Function With Valid Credentials
+2024=06=15 09:53:38 INFO  CommonFunctions:114 - Logging to the Dimension Application
+2024=06=15 09:53:38 INFO  WorkcenterOrder:22 - Navigated to Workcenter Order
+2024=06=15 09:53:50 INFO  WorkcenterOrder:30 - Workcenter objects initialized
+2024=06=15 09:53:52 INFO  OrderDetails:23 - Navigated to Order Details Screen
+2024=06=15 09:54:52 INFO  SubConBooking:89 - Navigated to SubContractor Booking Screen
+2024=06=15 09:55:52 INFO  CommonFunctions:190 - Logging out from the Dimension
+2024=06=15 09:57:29 INFO  CommonFunctions:163 - Loading the Property File
+2024=06=15 09:57:29 INFO  CommonFunctions:97 - Into the Load Property File functions
+2024=06=15 09:57:29 INFO  CommonFunctions:98 - Reading Load Property File 
+2024=06=15 09:57:29 INFO  CommonFunctions:100 - Read Load Property File
+2024=06=15 09:57:29 INFO  CommonFunctions:165 - Property File loaded successfully
+2024=06=15 09:57:29 INFO  CommonFunctions:169 - Browser is :chrome
+2024=06=15 09:57:29 INFO  CommonFunctions:170 - URL is :http://192.168.2.165/dimensiontest/frm_login.aspx
+2024=06=15 09:57:29 INFO  CommonFunctions:173 - Launching chrome
+2024=06=15 09:57:32 INFO  CommonFunctions:182 - Navigating to Dimension
+2024=06=15 09:57:34 INFO  LoginToDimension:25 - Login Function With Valid Credentials
+2024=06=15 09:57:34 INFO  CommonFunctions:114 - Logging to the Dimension Application
+2024=06=15 09:57:34 INFO  WorkcenterOrder:22 - Navigated to Workcenter Order
+2024=06=15 09:57:43 INFO  WorkcenterOrder:30 - Workcenter objects initialized
+2024=06=15 09:57:44 INFO  WorkcenterOrder:35 - Order number entered and order details are loaded
+2024=06=15 09:57:44 INFO  OrderDetails:23 - Navigated to Order Details Screen
+2024=06=15 09:57:46 INFO  OrderDetails:33 - Moved to Process Actions
+2024=06=15 09:57:46 INFO  SubConBooking:89 - Navigated to SubContractor Booking Screen
+2024=06=15 09:57:47 INFO  SubConBooking:35 - Entering Remarks
+2024=06=15 09:57:47 INFO  CommonFunctions:190 - Logging out from the Dimension
+2024=06=15 09:58:03 INFO  CommonFunctions:130 - Navigated to Setting Link
+2024=06=15 09:58:03 INFO  CommonFunctions:132 - Logout button clicked
+2024=06=15 09:58:03 INFO  CommonFunctions:192 - Execution done and closing the browser

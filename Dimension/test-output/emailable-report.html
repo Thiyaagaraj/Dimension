@@ -9,15 +9,35 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Dimension Test Automation</th></tr>
-<tr><td><a href="#t0">Login to Dimension</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">27,012</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Login to Dimension</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">14,298</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Dimension Test Automation</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login to Dimension &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.SubConBooking</td><td><a href="#m0">newSubConBooking</a></td><td rowspan="1">1718366048068</td><td rowspan="1">13081</td></tr><tr><th colspan="4">Login to Dimension &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testCases.LoginToDimension</td><td><a href="#m1">verifyLogin</a></td><td rowspan="1">1718366034711</td><td rowspan="1">249</td></tr><tr class="passedodd"><td rowspan="1">testCases.OrderDetails</td><td><a href="#m2">workCenterDetails</a></td><td rowspan="1">1718366044215</td><td rowspan="1">3853</td></tr><tr class="passedeven"><td rowspan="1">testCases.WorkcenterOrder</td><td><a href="#m3">workCenterOrder</a></td><td rowspan="1">1718366035019</td><td rowspan="1">9195</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Dimension Test Automation</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login to Dimension &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.SubConBooking</td><td><a href="#m0">newSubConBooking</a></td><td rowspan="1">1718425666896</td><td rowspan="1">964</td></tr><tr><th colspan="4">Login to Dimension &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testCases.LoginToDimension</td><td><a href="#m1">verifyLogin</a></td><td rowspan="1">1718425654416</td><td rowspan="1">383</td></tr><tr class="passedodd"><td rowspan="1">testCases.OrderDetails</td><td><a href="#m2">workCenterDetails</a></td><td rowspan="1">1718425664019</td><td rowspan="1">2877</td></tr><tr class="passedeven"><td rowspan="1">testCases.WorkcenterOrder</td><td><a href="#m3">workCenterOrder</a></td><td rowspan="1">1718425654926</td><td rowspan="1">9092</td></tr></tbody>
 </table>
-<h2>Login to Dimension</h2><h3 id="m0">testCases.SubConBooking#newSubConBooking</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;String.equals(Object)&quot; because &quot;dbBookingID&quot; is null
-	at testCases.SubConBooking.newSubConBooking(SubConBooking.java:97)
+<h2>Login to Dimension</h2><h3 id="m0">testCases.SubConBooking#newSubConBooking</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=125.0.6422.142)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [184f11b82f58a45d196db35c3a6fe4f6, sendKeysToElement {value=[Ljava.lang.CharSequence;@56637cff, id=f.CE8B2178199860C307332CD7C2038C31.d.61C7BB40B1D036EC4F7A646C60035EE8.e.483}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\lt\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49834/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (184f11b82f58a45d196db35c3a6fe4f6)] -&gt; id: txtRemark-inputEl]
+Session ID: 184f11b82f58a45d196db35c3a6fe4f6
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+	at testCases.SubConBooking.subConBooking(SubConBooking.java:37)
+	at testCases.SubConBooking.newSubConBooking(SubConBooking.java:92)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at testCases.TestRunner.main(TestRunner.java:19)
-... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">testCases.LoginToDimension#verifyLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>Valid</td><td>support@speedstep.de</td><td>Speedstepger1848#y2</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">testCases.OrderDetails#workCenterDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">testCases.WorkcenterOrder#workCenterOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>2064092</td><td>74</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
