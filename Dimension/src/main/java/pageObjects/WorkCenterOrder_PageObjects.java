@@ -14,5 +14,7 @@ public class WorkCenterOrder_PageObjects {
 	@FindBy(id = "imgBtnDirectSearch")
 	public static WebElement directSearchBtn;
 	
+	@FindBy(id = "imgbtnSearch-btnInnerEl")
+	public static WebElement searchBtn;
 	
 }

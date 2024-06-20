@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 
 import commonFunctions.CommonFunctions;
-import pageObjects.OrderDetails_PageObjects;
+import pageObjects.OrderGeneralScreen_PageObjects;
 
 public class OrderDetails extends CommonFunctions {
 	
@@ -27,12 +27,13 @@ static Logger logger = Logger.getLogger(OrderDetails.class);
 		driver.switchTo().frame(iFrameElement);
 		driver.switchTo().frame("tabGeneral_IFrame");
 		
-	    PageFactory.initElements(driver, OrderDetails_PageObjects.class);
+	    PageFactory.initElements(driver, OrderGeneralScreen_PageObjects.class);
 	    
 	    testCase.log(Status.INFO, "Moved to Process Actions");
 		logger.info("Moved to Process Actions");
-	    OrderDetails_PageObjects.processActions.click();
+	    OrderGeneralScreen_PageObjects.processActions.click();
 	    
 	    driver.switchTo().defaultContent();
 	}
+	
 }

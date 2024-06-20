@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class SubConBooking_PageObjects {
-	
+		
 	@FindBy(id = "ImgbtnSubConBooking-textEl")
 	public static WebElement subConBooking;
 	

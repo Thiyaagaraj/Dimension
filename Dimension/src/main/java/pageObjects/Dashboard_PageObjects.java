@@ -16,5 +16,8 @@ public class Dashboard_PageObjects {
 	
 	@FindBy(partialLinkText = "Workcenter Order")
 	public static WebElement workCenterOrder;
+	
+	@FindBy(partialLinkText = "Price inquiry")
+	public static WebElement priceInquiry;
 
 }

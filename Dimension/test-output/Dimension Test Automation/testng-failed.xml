@@ -3,13 +3,13 @@
 <suite name="Failed suite [Dimension Test Automation]">
   <test thread-count="5" name="Login to Dimension(failed)">
     <classes>
-      <class name="testCases.SubConBooking">
+      <class name="testCases.LoginValidation">
         <methods>
           <include name="launchBrowser"/>
-          <include name="newSubConBooking"/>
           <include name="tearDown"/>
+          <include name="verifyLogin" invocation-numbers="2"/>
         </methods>
-      </class> <!-- testCases.SubConBooking -->
+      </class> <!-- testCases.LoginValidation -->
     </classes>
   </test> <!-- Login to Dimension(failed) -->
 </suite> <!-- Failed suite [Dimension Test Automation] -->

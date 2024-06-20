@@ -23,6 +23,9 @@ public class Login_PageObjects {
 	@FindBy(xpath = "//a[@id='button-1005']")
 	public static WebElement inValidOkBtn;
 	
-	@FindBy(id = "button-1006")
+	@FindBy(id = "button-1006-btnIconEl")
 	public static WebElement alreadyLoggedInYes;
+	
+	@FindBy(id = "imgCont")
+	public static WebElement sessionTimeout;
 }
