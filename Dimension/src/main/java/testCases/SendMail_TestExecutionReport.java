@@ -45,7 +45,7 @@ public class SendMail_TestExecutionReport extends CommonFunctions {
 			message.setFrom(new InternetAddress("lthiyagaraj@speedstep.de"));
 			message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("lthiyagaraj@speedstep.de"));
 			
-			message.setSubject("Test Execution");
+			message.setSubject("Dimension Test Execution");
 			
 			BodyPart messageBodyPart1 = new MimeBodyPart();
 			messageBodyPart1.setText("Dimension Automation Test Execution Report attached");
