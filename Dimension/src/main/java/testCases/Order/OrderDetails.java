@@ -1,4 +1,4 @@
-package testCases;
+package testCases.Order;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;

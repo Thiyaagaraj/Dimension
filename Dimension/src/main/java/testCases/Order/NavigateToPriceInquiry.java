@@ -1,4 +1,4 @@
-package testCases;
+package testCases.Order;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
@@ -16,24 +16,12 @@ public class NavigateToPriceInquiry extends CommonFunctions {
 	public void navigatingToPriceInquiry() {
 
 		PageFactory.initElements(driver, Dashboard_PageObjects.class);
-		Dashboard_PageObjects.dashboardExpand.click();
+		//Dashboard_PageObjects.dashboardExpand.click();
 		Dashboard_PageObjects.priceInquiry.click();
 
 		testCase.log(Status.INFO, "Navigated to Price Inquiry");
 		logger.info("Navigated to Price Inquiry");
 	}
-
-
-	@Test(dataProvider = "loginData", dataProviderClass = CommonFunctions.class)
-	public void login(String scenario, String userName, String passWord) throws	InterruptedException { 
-		testCase = extentReport.createTest("Login to Dimension"); 
-		testCase.info("Login");
-		logger.info("Login");
-		login(userName, passWord);
-		testCase.info("Login successfull"); 
-		logger.info("Login successfull"); 
-	}
-
 
 	@Test
 	public void priceInquiry() {

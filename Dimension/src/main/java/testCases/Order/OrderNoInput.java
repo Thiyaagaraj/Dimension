@@ -1,4 +1,4 @@
-package testCases;
+package testCases.Order;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
@@ -13,19 +13,25 @@ import pageObjects.WorkCenterOrder_PageObjects;
 
 public class OrderNoInput extends CommonFunctions {
 	
-	static Logger logger = Logger.getLogger(NavigateToWCOrder.class);
+	static Logger logger = Logger.getLogger(OrderNoInput.class);
 	
 		@Test(dataProvider = "OrderData", dataProviderClass = CommonFunctions.class)
 		public void orderNoDirectInput(String OrderNo, String SubOrderNo) {
 			testCase = extentReport.createTest("Order No Input");
 			testCase.log(Status.INFO, "Navigating to Order General Screen");
 			logger.info("Workcenter objects initialized");
+			
+			driver.switchTo().frame("id_798853033_IFrame");
+			driver.switchTo().frame("Tab1_IFrame");
+			
 			PageFactory.initElements(driver, WorkCenterOrder_PageObjects.class);
 			PageFactory.initElements(driver, OrderGeneralScreen_PageObjects.class);
+			
 			WorkCenterOrder_PageObjects.orderInput.sendKeys(OrderNo);
 			WorkCenterOrder_PageObjects.subOrderInput.sendKeys(SubOrderNo);
 			logger.info("Order No and Sub Order Number are entered");
 			WorkCenterOrder_PageObjects.directSearchBtn.click();
+			
 			
 			driver.switchTo().defaultContent();
 			
@@ -44,6 +50,9 @@ public class OrderNoInput extends CommonFunctions {
 			testCase.log(Status.PASS, "Order General screen loaded successfully");	
 			
 			driver.switchTo().defaultContent();
-			logOut();
+			driver.switchTo().frame("id_798853033_IFrame");
+			WorkCenterOrder_PageObjects.orderCloseBtn.click();
+			
+			driver.switchTo().defaultContent();
 		}
 }

@@ -17,4 +17,15 @@ public class WorkCenterOrder_PageObjects {
 	@FindBy(id = "imgbtnSearch-btnInnerEl")
 	public static WebElement searchBtn;
 	
+	@FindBy(id = "tab-1011-btnInnerEl")
+	public static WebElement summaryView;
+	
+	@FindBy(id = "tab-1024-closeEl")
+	public static WebElement orderCloseBtn;
+	
+	@FindBy(id = "tab-1028-closeEl")
+	public static WebElement orderCloseBtnSearch;
+	
+	@FindBy(id = "tab-1011-btnInnerEl")
+	public static WebElement optionSize;
 }

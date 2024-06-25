@@ -1,4 +1,4 @@
-package testCases;
+package testCases.Order;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -45,9 +45,7 @@ public class PriceInquiryMain extends CommonFunctions{
 		}else {
 			testCase.log(Status.FAIL, "Price Inquiry Details screen is NOT loaded succesfully");
 		}
-		logger.info("Price Inquiry Details screen loaded verification done");
+		logger.info("Price Inquiry Details screen verification done");
 		driver.switchTo().defaultContent();
 	}
-
-
 }

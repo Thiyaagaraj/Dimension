@@ -10,12 +10,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.Duration;
 import java.util.Properties;
+import java.util.concurrent.TimeoutException;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -23,6 +26,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
@@ -43,7 +48,7 @@ public class CommonFunctions {
 	public static ExtentSparkReporter sparkReporter;
 	public static ExtentTest testCase;
 	String url;
-	//public static WebDriverWait wait;
+	public static WebDriverWait wait;
 
 	Logger logger = Logger.getLogger(CommonFunctions.class);
 	String [][] data=null;
@@ -82,7 +87,7 @@ public class CommonFunctions {
 		String[][] data=getExcelData(".\\TestData\\TestData.xlsx","SubContractor");
 		return data;
 	}
-	
+
 	@DataProvider(name="Email")
 	public String[][] eMailDataProvider() throws IOException{
 
@@ -130,30 +135,36 @@ public class CommonFunctions {
 	}
 
 	public void login(String userName, String passWord) throws InterruptedException {
-		logger.info("Logging to the Dimension Application");
+
+		logger.info("Login Initiated");
 		testCase.log(Status.INFO, "Login Initiated");
 		PageFactory.initElements(driver, Login_PageObjects.class);
 		Login_PageObjects.userName.sendKeys(userName);
 		Login_PageObjects.passWord.sendKeys(passWord);
 		Login_PageObjects.signIn.click();
 
-		//Thread.sleep(3000);
-		
-		if(Login_PageObjects.alreadyLoggedInYes.isDisplayed()) {
-			//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			Login_PageObjects.alreadyLoggedInYes.click(); 
-		}
 	}
 
 	public void logOut() {
+		testCase = extentReport.createTest("LogOut");
 		testCase.log(Status.INFO, "Logout Initiated");
 		PageFactory.initElements(driver, Dashboard_PageObjects.class);
 		Dashboard_PageObjects.settingsLink.click();
 		logger.info("Navigated to Setting Link");
 		Dashboard_PageObjects.signOut.click();
 		logger.info("Logout button clicked");
-		testCase.log(Status.INFO, "Logged Out successfully");
-		driver.get(driver.getCurrentUrl());
+		
+		wait.until(ExpectedConditions.titleIs("Login to SpeedStep Dimension"));	
+		String loginTitle = driver.getTitle();
+
+		if(loginTitle.equalsIgnoreCase("Login to SpeedStep Dimension")){
+			testCase.log(Status.PASS, "Logged Out successfully");
+
+		}else {
+			testCase.log(Status.FAIL, "Log Out Failed");
+		}
+		logger.info("Logout Validation done");
+
 	}
 
 	public static String dataBaseConnection(String number) throws ClassNotFoundException, SQLException {
@@ -177,9 +188,9 @@ public class CommonFunctions {
 	}
 
 	@BeforeSuite
-	public void launchBrowser() throws IOException {
+	public void launchBrowser() throws IOException{
 		extentReport = new ExtentReports();
-		sparkReporter = new ExtentSparkReporter("./ExtentReport.html");
+		sparkReporter = new ExtentSparkReporter("./Dimension_Test_Execution_Report.html");
 		extentReport.attachReporter(sparkReporter);
 		logger.info("Application Test Execution Begins");
 		PropertyConfigurator.configure("./log4j.properties");
@@ -188,31 +199,28 @@ public class CommonFunctions {
 		logger.info("Property File loaded successfully");
 		String browser=properties.getProperty("browser");
 		url=properties.getProperty("url");
-		//String driverLocation=properties.getProperty("DriverLocation");
 		logger.info("Browser is :"+browser);
 		logger.info("URL is :"+url);
-		//logger.info("Driver Location is :"+driverLocation);
 		if(browser.equalsIgnoreCase("chrome")) {
 			logger.info("Launching chrome");
-			//System.setProperty("Webdriver.chrome.driver", driverLocation);
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firfox")) {
 			logger.info("Launching Firfox");
-			//System.setProperty("Webdriver.gecko.driver", driverLocation);
 			driver = new FirefoxDriver();
 		}
 		driver.manage().window().maximize();
 		logger.info("Navigating to Dimension");
 		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		//wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 	}
 
 	@AfterSuite
 	public void tearDown() {
 		logger.info("Logging out from Dimension"); 
-		//logOut();
+		logOut();
 		logger.info("Execution done and closing browser");
+		testCase.log(Status.INFO, "Execution done and closing browser");
 		driver.quit();
 		extentReport.flush();
 		SendMail_TestExecutionReport mail = new SendMail_TestExecutionReport();

@@ -29,6 +29,7 @@ public class SendMail_TestExecutionReport extends CommonFunctions {
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.port","587");
 		props.put("mail.smtp.starttls.enable","true");
+		props.put("mail.smtp.ssl.trust", "*");
 		
 		Session session = Session.getDefaultInstance(props,new javax.mail.Authenticator() {
 
@@ -43,7 +44,7 @@ public class SendMail_TestExecutionReport extends CommonFunctions {
 			Message message = new MimeMessage(session);
 			
 			message.setFrom(new InternetAddress("lthiyagaraj@speedstep.de"));
-			message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("lthiyagaraj@speedstep.de"));
+			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("lthiyagaraj@speedstep.de, cmathankumar@speedstep.de"));
 			
 			message.setSubject("Dimension Test Execution");
 			
@@ -51,7 +52,7 @@ public class SendMail_TestExecutionReport extends CommonFunctions {
 			messageBodyPart1.setText("Dimension Automation Test Execution Report attached");
 			
 			MimeBodyPart messageBodyPart2 = new MimeBodyPart();
-			String filename = "ExtentReport.html";
+			String filename = "Dimension_Test_Execution_Report.html";
 			DataSource source = new FileDataSource(filename);
 			messageBodyPart2.setDataHandler(new DataHandler(source));
 			messageBodyPart2.setFileName(filename);

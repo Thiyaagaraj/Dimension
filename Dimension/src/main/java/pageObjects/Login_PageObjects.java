@@ -20,7 +20,7 @@ public class Login_PageObjects {
 	@FindBy(xpath = "//div[text()='Invalid email or password']")
 	public static WebElement invalid;
 	
-	@FindBy(xpath = "//a[@id='button-1005']")
+	@FindBy(id = "button-1005")
 	public static WebElement inValidOkBtn;
 	
 	@FindBy(id = "button-1006-btnIconEl")
